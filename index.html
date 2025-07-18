@@ -23,7 +23,30 @@
 			m.parentNode.insertBefore(a, m)
 		})(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
 		sender('7aad17515d8142')
+
 	</script>
+	<script>
+	// Call the below function
+	waitForElementToDisplay("iframe", 1000, 9000,
+		function() {document.getElementsByTagName("iframe")[0].contentDocument.getElementsByClassName("sender-form-els")[0].children[2].style.setProperty('display', 'none')});
+
+	function waitForElementToDisplay(selector, checkFrequencyInMs, timeoutInMs, callback) {
+		var startTimeInMs = Date.now();
+		(function loopSearch() {
+			if (document.querySelector(selector) != null) {
+				callback();
+				return;
+			}
+			else {
+				setTimeout(function () {
+					if (timeoutInMs && Date.now() - startTimeInMs > timeoutInMs)
+						return;
+					loopSearch();
+				}, checkFrequencyInMs);
+			}
+		})();
+	}
+		</script>
 </head>
 
 <body>
@@ -96,6 +119,7 @@
 		</div>
 
 		<div id="newsletter">
+			<h3>Newsletter</h3>
 			<div style="text-align: left" class="sender-form-field" data-sender-form-id="eERQVY"></div>
 		</div>
 	</div>
