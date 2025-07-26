@@ -26,109 +26,169 @@
 
 	</script>
 	<script>
-	// Call the below function
-	waitForElementToDisplay("iframe", 1000, 9000,
-		function() {document.getElementsByTagName("iframe")[0].contentDocument.getElementsByClassName("sender-form-els")[0].children[2].style.setProperty('display', 'none')});
+		// Call the below function
+		waitForElementToDisplay("iframe", 1000, 9000,
+			function () { document.getElementsByTagName("iframe")[0].contentDocument.getElementsByClassName("sender-form-els")[0].children[2].style.setProperty('display', 'none') });
 
-	function waitForElementToDisplay(selector, checkFrequencyInMs, timeoutInMs, callback) {
-		var startTimeInMs = Date.now();
-		(function loopSearch() {
-			if (document.querySelector(selector) != null) {
-				callback();
-				return;
-			}
-			else {
-				setTimeout(function () {
-					if (timeoutInMs && Date.now() - startTimeInMs > timeoutInMs)
-						return;
-					loopSearch();
-				}, checkFrequencyInMs);
-			}
-		})();
-	}
-		</script>
+		function waitForElementToDisplay(selector, checkFrequencyInMs, timeoutInMs, callback) {
+			var startTimeInMs = Date.now();
+			(function loopSearch() {
+				if (document.querySelector(selector) != null) {
+					callback();
+					return;
+				}
+				else {
+					setTimeout(function () {
+						if (timeoutInMs && Date.now() - startTimeInMs > timeoutInMs)
+							return;
+						loopSearch();
+					}, checkFrequencyInMs);
+				}
+			})();
+		}
+	</script>
 </head>
 
 <body>
-	<header>
-		<h1>David North</h1>
-		<nav>
-			<a href="#about">Policies</a>
-			<a href="#about">About</a>
-			<a href="#about">Contact</a>
-		</nav>
-	</header>
+	<nav>
+		<a href="#policies">Policies</a>
+		<a href="#about">About</a>
+		<a href="#key-dates">Key Dates</a>
+		<a href="#contact">Contact</a>
+	</nav>
 
 	<div id="splash">
 		<img src="racing.jpg">
-		<h2>Vote David North for<br>Nelson City Council</h2>
+		<div>
+			<h1 class="vote-caps">VOTE DAVID NORTH</h1>
+			<h2>For Nelson City Council</h2>
+			<a href="#policies" class="button">READ WHY ⟶ </a>
+		</div>
 	</div>
 
-	<div id="policies">
+	<div id="vibes">
 		<div>
-			<div>
-				<h3>Policy One</h3>
-				<p>TODO</p>
-			</div>
-			<img src="TODO">
+			<h1>I STAND FOR</h1>
+			<h1>PEOPLE BEFORE PROFITS</h1>
 		</div>
 		<div>
 			<div>
-				<h3>Policy Two</h3>
-				<p>TODO</p>
+				<img src="/TODO">
+				<h3>VIBRANCY</h3>
+				<p>Revitalising the city centre, supporting local creatives, boosting events, attracting people into
+					town, making Nelson feel alive again.</p>
 			</div>
-			<img src="TODO">
-		</div>
-		<div>
 			<div>
-				<h3>Policy Three</h3>
-				<p>TODO</p>
+				<img src="/TODO">
+				<h3>INCLUSIVITY</h3>
+				<p>Celebrating diversity, accessibility, representation, respect for all cultures, LGBTQIA+ rights, and
+					creating a council that reflects everyone.</p>
 			</div>
-			<img src="TODO">
-		</div>
-		<div>
 			<div>
-				<h3>Policy Four</h3>
-				<p>TODO</p>
+				<img src="/TODO">
+				<h3>SUSTAINABILITY</h3>
+				<p>Safe neighbourhoods, climate responsibility, better transport, and smart decisions made with the next
+					generation in mind.</p>
 			</div>
-			<img src="TODO">
 		</div>
-		<div>
-			<div>
-				<h3>Policy Five</h3>
-				<p>TODO</p>
-			</div>
-			<img src="TODO">
-		</div>
+		<a href="#contact" class="button">HAVE A QUESTION? GET IN TOUCH</a>
+
 	</div>
 
 	<div id="about">
-		<img src="flying.jpg">
 		<div>
+			<h2>Kia ora,<br>I’m David North.</h2>
 			<p>
-				TODO
+				I’ve lived in Nelson since 2002, where my wife Alison and I raised our two children. I’ve worked as an
+				airline pilot for over 25 years, and I’m also a passionate musician. I play in the <a
+					href="nso.nz">Nelson Symphony Orchestra</a> and enjoy being part of our local arts community.
+				<br>
+				<br>
+				I’m standing for council because I care deeply about our future. I want to help build an inclusive,
+				thriving and sustainable Nelson, where families feel supported, the city centre is full of life, and
+				decisions are made with the next generation in mind. I’d be honoured to represent you.
 			</p>
 		</div>
+		<img src="flying.jpg">
 	</div>
 
-	<div id="contact">
-		<div id="links">
-			<p>Email: <a href="mailto:contact@david-north.com">contact@david-north.com</a></p>
-			<p>Phone: 021 167 8887</p>
-			<p>Facebook: <a href="/TODO">Vote David North</a></p>
+	<div id="community">
+		<div>
+
+			<div>
+				<h2>COMMUNITY PROJECTS</h2>
+				<p>Nelson has given so much to my family, and I’ve always looked for ways to give back. Over the years, I’ve been actively involved in numerous community projects, particularly those that bring people together through music, creativity, and connection.</p>
+			</div>
+
+			<div>
+			</div>
+				<div>
+
+			</div>
+
 		</div>
 
-		<div id="newsletter">
-			<h3>Newsletter</h3>
-			<div style="text-align: left" class="sender-form-field" data-sender-form-id="eERQVY"></div>
+		<div id="policies">
+			<div>
+				<div>
+					<h3>Policy One</h3>
+					<p>TODO</p>
+				</div>
+				<img src="TODO">
+			</div>
+			<div>
+				<div>
+					<h3>Policy Two</h3>
+					<p>TODO</p>
+				</div>
+				<img src="TODO">
+			</div>
+			<div>
+				<div>
+					<h3>Policy Three</h3>
+					<p>TODO</p>
+				</div>
+				<img src="TODO">
+			</div>
+			<div>
+				<div>
+					<h3>Policy Four</h3>
+					<p>TODO</p>
+				</div>
+				<img src="TODO">
+			</div>
+			<div>
+				<div>
+					<h3>Policy Five</h3>
+					<p>TODO</p>
+				</div>
+				<img src="TODO">
+			</div>
 		</div>
-	</div>
 
-	<img id="end-spread" src="TODO">
+		<div id="contact">
+			<div>
+				<h1 class="vote-caps">VOTE DAVID NORTH</h1>
+				<h1>PEOPLE BEFORE PROFIT</h1>
+			</div>
+			<div>
+				<div id="links">
+					<a href="mailto:contact@david-north.com">contact@david-north.com</a>
+					<p>Phone: 021 167 8887</p>
+					<!-- <p><a href="/TODO">Facebook</a> | <a href="/TODO">Linkedin</a></p> -->
+					<a href="/TODO">Facebook</a>
+				</div>
 
-	<footer>
-		<h4>Authorised by David North</h4>
-	</footer>
+				<div id="newsletter">
+					<h3>Newsletter</h3>
+					<div style="text-align: left" class="sender-form-field" data-sender-form-id="eERQVY"></div>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<h4>Authorised by David North</h4>
+		</footer>
 
 
 </body>
