@@ -14,9 +14,12 @@ body {
 nav {
 	position: absolute;
 	right: 0;
+	width: 90%;
 	padding-top: 50px;
-	padding-right: 50px;
 	z-index: 2;
+	display: flex;
+	justify-content: end;
+	flex-wrap: wrap;
 
 	a {
 		text-decoration: none;
@@ -31,42 +34,32 @@ nav {
 #splash {
 	height: 1000px;
 	z-index: 1;
+	background-image: url("Pilot_Framed.jpg");
+	background-position: center;
+	background-size: cover;
+	padding: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 
-	img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		object-position: center;
-		filter: brightness(0.6);
+	* {
+
+		align-self: center;
 	}
 
-	>div {
-		position: absolute;
-		top: 400px;
-		padding: 50px;
-		width: calc(100% - 100px);
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
+	h1 {
+		font-size: 7rem;
+		margin: 0;
+		color: var(--darker-color);
+		margin-top: 350px;
+		-webkit-text-stroke: 4px #fff;
+	}
 
-		* {
+	h2 {
+		font-size: 2rem;
+		margin-top: 0;
+		color: #fff;
 
-			align-self: center;
-		}
-
-		h1 {
-			font-size: 7rem;
-			margin: 0;
-			color: var(--darker-color);
-			-webkit-text-stroke: 4px #fff;
-		}
-
-		h2 {
-			font-size: 2rem;
-			margin-top: 0;
-			color: #fff;
-
-		}
 	}
 }
 
@@ -102,7 +95,6 @@ nav {
 	> :first-child {
 		font-size: 2rem;
 		padding-top: 50px;
-		padding-left: 100px;
 
 		:first-child {
 			color: var(--contrast-color);
@@ -120,6 +112,7 @@ nav {
 		flex-flow: row wrap;
 		gap: 100px;
 		align-self: center;
+		justify-content: center;
 		padding: 100px 0;
 
 		div {
@@ -167,17 +160,13 @@ nav {
 		gap: 50px;
 		justify-content: center;
 
-		* * {
-			min-width: 500px;
-		}
-
 		img {
-			max-width: 600px;
+			max-width: min(600px, 90%);
 			border-radius: 40px;
 		}
 
 		>div {
-			max-width: 700px;
+			flex-basis: 700px;
 
 			h2 {
 				color: var(--pop-color);
@@ -406,7 +395,6 @@ nav {
 		justify-content: space-evenly;
 		align-content: center;
 		font-size: 2rem;
-		min-width: 500px;
 		gap: 50px;
 
 		p,
@@ -433,4 +421,17 @@ footer {
 		color: #fff;
 		font-size: 1.1em;
 	}
+}
+
+
+@media (max-width: 600px) {
+
+	#about {
+		>div:first-child {
+			img {
+				max-width: 400px;
+			}
+		}
+	}
+
 }
